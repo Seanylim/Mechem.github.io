@@ -1,260 +1,225 @@
+
+<!doctype html>
 <html lang="en">
-<body>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.80.0">
+    <title>Carousel Template · Bootstrap v5.0</title>
 
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/carousel/">
 
-  <!-- Bootstrap CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous"> 
-  
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#">Navbar</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Link</a>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Dropdown
-          </a>
-          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="#">Action</a></li>
-            <li><a class="dropdown-item" href="#">Another action</a></li>
-            <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="#">Something else here</a></li>
-          </ul>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-        </li>
-      </ul>
-      <form class="d-flex">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success" type="submit">Search</button>
-      </form>
+    
+
+    <!-- Bootstrap core CSS -->
+<link href="/docs/5.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+
+    <!-- Favicons -->
+<link rel="apple-touch-icon" href="/docs/5.0/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
+<link rel="icon" href="/docs/5.0/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="/docs/5.0/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+<link rel="manifest" href="/docs/5.0/assets/img/favicons/manifest.json">
+<link rel="mask-icon" href="/docs/5.0/assets/img/favicons/safari-pinned-tab.svg" color="#7952b3">
+<link rel="icon" href="/docs/5.0/assets/img/favicons/favicon.ico">
+<meta name="theme-color" content="#7952b3">
+
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+
+    
+    <!-- Custom styles for this template -->
+    <link href="carousel.css" rel="stylesheet">
+  </head>
+  <body>
+    
+<header>
+  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Carousel</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav me-auto mb-2 mb-md-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+          </li>
+        </ul>
+        <form class="d-flex">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+      </div>
     </div>
-  </div>
-</nav>
-  
-  <div class="page-wrap">
+  </nav>
+</header>
 
-    <div class="jumbotron">
-      <div style="margin-top:130px" class="container">
-        <a href="#main-nav" class="h5 open-menu"><i style="color:#fff; position: relative; bottom:120px; cursor:pointer;" class="fa fa-bars fa-2x fa-fw"></i></a>
-        <a href="#" class="h5 close-menu"><i style="color:#fff; position: relative; bottom:120px; cursor:pointer;" class="fa fa-times fa-2x fa-fw"></i></a>
-        <h1>I'm Tim</h1>
-        <div class="spacer"></div>
-        <h1>Designer + Developer</h1>
-        <div class="spacer"></div>
-        <hr><hr>
-        <h2 class="text-center">I build awesome web apps</h2>
+<main>
+
+  <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777"/></svg>
+
+        <div class="container">
+          <div class="carousel-caption text-start">
+            <h1>Example headline.</h1>
+            <p>Some representative placeholder content for the first slide of the carousel.</p>
+            <p><a class="btn btn-lg btn-primary" href="#">Sign up today</a></p>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777"/></svg>
+
+        <div class="container">
+          <div class="carousel-caption">
+            <h1>Another example headline.</h1>
+            <p>Some representative placeholder content for the second slide of the carousel.</p>
+            <p><a class="btn btn-lg btn-primary" href="#">Learn more</a></p>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777"/></svg>
+
+        <div class="container">
+          <div class="carousel-caption text-end">
+            <h1>One more for good measure.</h1>
+            <p>Some representative placeholder content for the third slide of this carousel.</p>
+            <p><a class="btn btn-lg btn-primary" href="#">Browse gallery</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+
+  <!-- Marketing messaging and featurettes
+  ================================================== -->
+  <!-- Wrap the rest of the page in another container to center all the content. -->
+
+  <div class="container marketing">
+
+    <!-- Three columns of text below the carousel -->
+    <div class="row">
+      <div class="col-lg-4">
+        <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg>
+
+        <h2>Heading</h2>
+        <p>Some representative placeholder content for the three columns of text below the carousel. This is the first column.</p>
+        <p><a class="btn btn-secondary" href="#">View details &raquo;</a></p>
+      </div><!-- /.col-lg-4 -->
+      <div class="col-lg-4">
+        <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg>
+
+        <h2>Heading</h2>
+        <p>Another exciting bit of representative placeholder content. This time, we've moved on to the second column.</p>
+        <p><a class="btn btn-secondary" href="#">View details &raquo;</a></p>
+      </div><!-- /.col-lg-4 -->
+      <div class="col-lg-4">
+        <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg>
+
+        <h2>Heading</h2>
+        <p>And lastly this, the third column of representative placeholder content.</p>
+        <p><a class="btn btn-secondary" href="#">View details &raquo;</a></p>
+      </div><!-- /.col-lg-4 -->
+    </div><!-- /.row -->
+
+
+    <!-- START THE FEATURETTES -->
+
+    <hr class="featurette-divider">
+
+    <div class="row featurette">
+      <div class="col-md-7">
+        <h2 class="featurette-heading">First featurette heading. <span class="text-muted">It’ll blow your mind.</span></h2>
+        <p class="lead">Some great placeholder content for the first featurette here. Imagine some exciting prose here.</p>
+      </div>
+      <div class="col-md-5">
+        <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg>
+
       </div>
     </div>
 
-    <div class="section" id="about"><h1>About</h1><hr></div>
+    <hr class="featurette-divider">
 
-    <div class="container">
-      <div class="row">
-        <div class="col-md-4">
-          <div class="well">
-            <img src="http://timothy.expert/codepen-resources/person_laptop.jpg" style="height:100%; width:100%">
-          </div>
-        </div>
-        <div class="col-md-8">
-          <div class="well">
-            <h3>Tim Robert-Fitzgerald</h3>
-            <p>I'm a Chicago based freelance full-stack web developer and I would love to help you with your project. Currently, I do all web related jobs and specialize in HTML5/CSS3, PHP, SQL. I can build any website, from huge dynamic apps to small static sites, on any budget. See my work below.</p>
-            <p><a href="#form" class="btn btn-default">Hire me</a></p>
-          </div>
-        </div>
-      </div><!--/.row-->
-    </div><!--/.container-->
+    <div class="row featurette">
+      <div class="col-md-7 order-md-2">
+        <h2 class="featurette-heading">Oh yeah, it’s that good. <span class="text-muted">See for yourself.</span></h2>
+        <p class="lead">Another featurette? Of course. More placeholder content here to give you an idea of how this layout would work with some actual real-world content in place.</p>
+      </div>
+      <div class="col-md-5 order-md-1">
+        <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg>
 
-    <div class="section" id="what-i-do"><h1>What I Do</h1><hr></div>
+      </div>
+    </div>
 
-    <div class="container">
-      <div class="row">
-        <div class="col-md-8">
-          <div class="well">
-            <h3>Skills</h3>
-            <div class="spacer"></div><div class="spacer"></div>
-            <div class="row">
-              <div class="col-md-4">
-                <div class="html"></div> <h4 style="font-weight: 400; display: inline;">HTML5</h4><br>
-                <div class="css"></div> <h4 style="font-weight: 400; display: inline;">CSS3</h4><br>
-                <div class="php"></div> <h4 style="font-weight: 400; display: inline;">PHP</h4><br>
-                <div class="sql"></div> <h4 style="font-weight: 400; display: inline; margin-bottom:5px;">SQL</h4>
-              </div>
-              <div class="col-md-8">
-                <div class="progress">
-                  <div class="progress-bar progress-bar-html" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width: 90%">
-                    <span class="sr-only">HTML5 90%</span>
-                  </div>
-                </div>
-                <div class="progress">
-                  <div class="progress-bar progress-bar-css" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width: 90%">
-                    <span class="sr-only">CSS3 90%</span>
-                  </div>
-                </div>
-                <div class="progress">
-                  <div class="progress-bar progress-bar-php" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width: 70%">
-                    <span class="sr-only">PHP 70%</span>
-                  </div>
-                </div>
-                <div class="progress">
-                  <div class="progress-bar progress-bar-sql" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%">
-                    <span class="sr-only">SQL 80%</span>
-                  </div>
-                </div>
-              </div><!--/.col-6-->
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="well">
-            <h3>I Build Great Websites</h3>
-            <p>Being a full stack developer, I can develop any website from a database driven web app to a small static site. Every custom website built uses higher grade techniques and is fast, mobile friendly, scalable.</p>
-          </div>
-        </div>
-      </div><!--/.row-->
-    </div><!--/.container-->
-    <div class="work visible-lg" style="height:250px !important;">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-3">
-            <h3><i class="fa fa-code"></i>&nbsp; Beautiful Code</h3>
-            <p>I write clean, semantic, organized, and valid markup that eliminates excess code and allows others to easily understand and therfore update content in the future.</p>
-          </div>
-          <div class="col-md-3">
-            <h3><i class="fa fa-fighter-jet"></i>&nbsp; Fast</h3>
-            <p>I build fast and efficient web sites. Fast websites always attract more visitors, and those visitors are more likely to choose you over the competition. In addition, website speed is essential for <abbr title="Search Engine Optimization">SEO</abbr> &mdash; <a href="http://moz.com/blog/how-website-speed-actually-impacts-search-ranking">faster websites rank higher</a>.</p>
-          </div>
-          <div class="col-md-3">
-            <h3><i class="fa fa-arrows-alt"></i>&nbsp; Responsive</h3>
-            <p>Responsive web design means that your website will work on any screen size, from desktops to mobile phones alike. Having a website that works well across all devices and screen sizes means your website has a broader reach, appealing to more visitors.</p>
-          </div>
-          <div class="col-md-3">
-            <h3><i class="fa fa-bolt"></i>&nbsp; Powerful</h3>
-            <p>From a static single page website to a full fledged database driven web app, I build websites that give your organization the potential to succeed.</p>
-          </div>
-        </div><!--/.row-->
-      </div><!--/.container-->
-    </div><!--/.work-->
-    <!--mobile work-->
-    <div class="container hidden-lg">
-      <div class="row">
-        <div class="col-md-12 col-sm-12 col-xs-12">
-          <div class="well">
-            <h3><i class="fa fa-code"></i>&nbsp; Beautiful Code</h3>
-            <p>I write clean, semantic, organized, and valid markup that eliminates excess code and allows others to easily understand and therfore update content in the future.</p>
-          </div>
-        </div>
-        <div class="col-md-12 col-sm-12 col-xs-12">
-          <div class="well">
-            <h3><i class="fa fa-fighter-jet"></i>&nbsp; Fast</h3>
-            <p>I build fast and efficient web sites. Fast websites always attract more visitors, and those visitors are more likely to choose you over the competition. In addition, website speed is essential for <abbr title="Search Engine Optimization">SEO</abbr> &mdash; <a href="http://moz.com/blog/how-website-speed-actually-impacts-search-ranking">faster websites rank higher</a>.</p>
-          </div>
-        </div>
-        <div class="col-md-12 col-sm-12 col-xs-12">
-          <div class="well">
-            <h3><i class="fa fa-arrows-alt"></i>&nbsp; Responsive</h3>
-            <p>Responsive web design means that your website will work on any screen size, from desktops to mobile phones alike. Having a website that works well across all devices and screen sizes means your website has a broader reach, appealing to more visitors.</p>
-          </div>
-        </div>
-        <div class="col-md-12 col-sm-12 col-xs-12">
-          <div class="well">
-            <h3><i class="fa fa-bolt"></i>&nbsp; Powerful</h3>
-            <p>From a static single page website to a full fledged database driven web app, I build websites that give your organization the potential to succeed.</p>
-          </div>
-        </div>
-      </div><!--/.row-->
-    </div><!--/.container and mobile work-->
+    <hr class="featurette-divider">
+
+    <div class="row featurette">
+      <div class="col-md-7">
+        <h2 class="featurette-heading">And lastly, this one. <span class="text-muted">Checkmate.</span></h2>
+        <p class="lead">And yes, this is the last block of representative placeholder content. Again, not really intended to be actually read, simply here to give you a better view of what this would look like with some actual content. Your content.</p>
+      </div>
+      <div class="col-md-5">
+        <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg>
+
+      </div>
+    </div>
+
+    <hr class="featurette-divider">
+
+    <!-- /END THE FEATURETTES -->
+
+  </div><!-- /.container -->
 
 
-    <div class="section" id="work"><h1>Recent Work</h1><hr></div>
-
-    <div class="container">
-      <div class="row">
-        <div class="col-md-6">
-          <div class="well">
-            <a href="http://teamflightbasketball.com"><img src="http://timothy.expert/codepen-resources/teamflightbasketball.png" alt="teamflightbasketball.com" height="150px" class="pull-left" style="padding-right: 15px; padding-bottom: 10px; padding-top:20px;"></a>
-            <h3>Team Flight Basketball</h3>
-            <p>A website for the youth basketball organization, Team Flight Basketball</p>
-            <div class="spacer"></div><div class="spacer"></div>
-          </div>
-        </div>
-        <div class="col-md-6">
-          <div class="well">
-            <a href="http://givingshops.com"><img src="http://timothy.expert/codepen-resources/givingshops.png" alt="GivingShops.com" height="150px" class="pull-left" style="padding-right: 15px; padding-bottom: 10px; padding-top:20px;"></a>
-            <h3>GivingShops</h3>
-            <p>An organization that aims to help people earn for their causes, just by shopping.</p>
-            <div class="spacer"></div><div class="spacer"></div>
-          </div>
-        </div>
-      </div><!--/.row-->
-    </div><!--/.container-->
+  <!-- FOOTER -->
+  <footer class="container">
+    <p class="float-end"><a href="#">Back to top</a></p>
+    <p>&copy; 2017–2021 Company, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+  </footer>
+</main>
 
 
-    <!--<div class="hidden-xs"><div class="work-together" id="contact">LETS WORK TOGETHER</div></div>-->
-    <div class="section" id="contact"><h1>Let&apos;s Work Together</h1><hr></div>
+    <script src="/docs/5.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
 
-    <div class="work-together">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
-            <h3>Send Me a Message</h3>
-            <div class="spacer"></div>
-            <form class="form-horizontal" role="form" id="form" method="post">
-              <div class="form-group">
-                <label for="name" class="col-sm-2 control-label">Name</label>
-                <div class="col-sm-10">
-                  <input type="text" class="contact form-control" name="name" id="name" placeholder="Name">
-                </div>
-              </div>
-              <div class="form-group">
-                <label for="email" class="col-sm-2 control-label">Email</label>
-                <div class="col-sm-10">
-                  <input type="email" class="contact form-control" name="email" id="email" placeholder="Email">
-                </div>
-              </div>
-              <div class="form-group">
-                <label for="subject" class="col-sm-2 control-label">Subject</label>
-                <div class="col-sm-10">
-                  <input type="text" class="contact form-control" name="subject" id="subject" placeholder="Subject">
-                </div>
-              </div>
-              <div class="form-group">
-                <label for="message" class="col-sm-2 control-label">Message</label>
-                <div class="col-sm-10">
-                  <textarea class="contact form-control" rows="3" name="message" id="message" placeholder="Message"></textarea>
-                </div>
-              </div>
-              <div class="form-group">
-                <div class="col-sm-offset-2 col-sm-10">
-                  <input type="submit" value="Send" class="btn btn-default" name="submit">
-                </div>
-              </div>
-            </form>
-          </div><!--/.col-->
-          <div class="col-lg-4 col-md-4 hidden-sm hidden-xs">
-            <h3>Contact Details</h3><div class="spacer"></div>
-            <p class="lead" style="margin-bottom:0px;"><i class="fa fa-map-marker"></i>&nbsp; 6519 N. Fairfield Avenue</p><p class="lead" style="text-indent:24px">Chicago, IL, 60645</p>
-            <p class="lead"><i class="fa fa-phone"></i>&nbsp; 312 576-9620</p>
-            <p class="lead"><i class="fa fa-envelope"></i>&nbsp; contact@timothy.expert</p>
-          </div>
-        </div><!--/.row-->
-      </div><!--/.container-->
-      <div class="container hidden-sm hidden-xs"><div class="spacer"></div><div class="spacer"></div><footer><p class="pull-right">Made in Chicago by Tim</p></footer></div>
-    </div><!--/.work-together-->
-
-  </div><!--/.page-wrap-->
-</body>
+      
+  </body>
 </html>
